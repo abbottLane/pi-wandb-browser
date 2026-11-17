@@ -639,7 +639,7 @@ class WandbBrowser {
 				projects.map((project) => ({
 					key: `${project.entity}/${project.name}`,
 					label: `${project.entity}/${project.name}`,
-					detail: `${project.runCount} runs · created ${age(project.createdAt)}`,
+					detail: `${project.runCount} run${project.runCount === 1 ? "" : "s"} · created ${age(project.createdAt)}`,
 				})),
 				"No projects",
 			);
